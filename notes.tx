@@ -1,0 +1,113 @@
+dnd_cli/
+│
+├── main.py
+├── requirements.txt
+├── README.md
+│
+├── game/
+│   ├── __init__.py
+│   │
+│   ├── core/
+│   │   ├── __init__.py
+│   │   ├── game.py
+│   │   ├── game_state.py
+│   │   └── game_loop.py
+│   │
+│   ├── characters/
+│   │   ├── __init__.py
+│   │   ├── character.py
+│   │   ├── player.py
+│   │   ├── npc.py
+│   │   └── stats.py
+│   │
+│   ├── creatures/
+│   │   ├── __init__.py
+│   │   ├── creature.py
+│   │   ├── monster.py
+│   │   └── creature_factory.py
+│   │
+│   ├── combat/
+│   │   ├── __init__.py
+│   │   ├── combat.py
+│   │   ├── actions.py
+│   │   ├── damage.py
+│   │   └── dice.py
+│   │
+│   ├── world/
+│   │   ├── __init__.py
+│   │   ├── world.py
+│   │   ├── map.py
+│   │   ├── location.py
+│   │   └── movement.py
+│   │
+│   ├── items/
+│   │   ├── __init__.py
+│   │   ├── item.py
+│   │   ├── weapon.py
+│   │   ├── armor.py
+│   │   ├── consumable.py
+│   │   └── inventory.py
+│   │
+│   ├── quests/
+│   │   ├── __init__.py
+│   │   ├── quest.py
+│   │   └── quest_manager.py
+│   │
+│   ├── persistence/
+│   │   ├── __init__.py
+│   │   ├── repository.py
+│   │   ├── json_repository.py
+│   │   └── save_manager.py
+│   │
+│   └── cli/
+│       ├── __init__.py
+│       ├── interface.py
+│       ├── commands.py
+│       └── renderer.py
+│
+├── data/
+│   ├── characters.json
+│   ├── creatures.json
+│   ├── items.json
+│   ├── locations.json
+│   ├── quests.json
+│   └── world.json
+│
+├── saves/
+│   ├── save_1.json
+│   ├── save_2.json
+│   └── save_3.json
+│
+└── tests/
+    ├── test_combat.py
+    ├── test_characters.py
+    ├── test_map.py
+    ├── test_inventory.py
+    └── test_save_load.py
+I wouldn't necessarily start with all of that
+That's the destination, not where I'd start.
+
+For version 0.1, I'd keep it much smaller:
+
+dnd_cli/
+│
+├── main.py
+│
+├── game/
+│   ├── __init__.py
+│   ├── game.py
+│   ├── character.py
+│   ├── creature.py
+│   ├── combat.py
+│   ├── map.py
+│   ├── item.py
+│   └── dice.py
+│
+├── data/
+│   ├── creatures.json
+│   ├── items.json
+│   └── world.json
+│
+├── saves/
+│
+└── tests/
